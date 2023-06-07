@@ -19,47 +19,48 @@ export default function Routes() {
                     tabBaractiveTintColor: 'red',
                     tabBarInactiveTintColor: 'black',
                 }}
-            />
-            <BottomTab.Screen
-                name="Home"
-                component={Home}
-                options={{ 
-                    tabBarLabel: 'Home', 
-                    tabBarIcon: ({ color }) => (
-                        <MaterialIcons name="home" color={color} size={26} />
-                    ),
-                }}
-            />
-            <BottomTab.Screen
-                name="Busca"
-                component={Busca}
-                options={{
-                    tabBarLabel: 'Busca',
-                    tabBarIcon: ({ color }) => (
-                        <MaterialIcons name="search" color={color} size={26} />
-                    ),
-                }}
-            />
-            <BottomTab.Screen
-                name="Pedidos"
-                component={Pedidos}
-                options={{
-                    tabBarLabel: 'Pedidos',
-                    tabBarIcon: ({ color }) => (
-                        <MaterialIcons name="assignment" color={color} size={26} />
-                    ),
-                }}
-            />
-            <BottomTab.Screen
-                name="Perfil"
-                component={Perfil}
-                options={{
-                    tabBarLabel: 'Perfil',
-                    tabBarIcon: ({ color }) => (
-                        <MaterialIcons name="person" color={color} size={26} />
-                    ),
-                }}
-            />
-    </NavigationContainer>
-  );
+            >
+                <BottomTab.Screen
+                    name="Home"
+                    component={Home}
+                    options={{ 
+                        tabBarLabel: 'Home', 
+                        tabBarIcon: ({ color }) => (
+                            <MaterialIcons name="home" color={color} size={26} />
+                        ),
+                    }}
+                />
+                <BottomTab.Screen
+                    name="Busca"
+                    component={Busca}
+                    options={{
+                        tabBarLabel: 'Busca',
+                        tabBarIcon: ({ color }) => (
+                            <MaterialIcons name="search" color={color} size={26} />
+                        ),
+                    }}
+                />
+                <BottomTab.Screen
+                    name="Pedidos"
+                    component={Pedidos}
+                    options={{
+                        tabBarLabel: 'Pedidos',
+                        tabBarIcon: ({ color }) => (
+                            <MaterialIcons name="assignment" color={color} size={26} />
+                        ),
+                    }}
+                />
+                <BottomTab.Screen
+                    name="Perfil"
+                    component={Perfil}
+                    options={{
+                        tabBarLabel: 'Perfil',
+                        tabBarIcon: ({ color }) => (
+                            <MaterialIcons name="person" color={color} size={26} />
+                        ),
+                    }}
+                />
+            </BottomTab.Navigator>
+        </NavigationContainer>
+    );
 }
