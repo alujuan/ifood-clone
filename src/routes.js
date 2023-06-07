@@ -4,12 +4,12 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
 
-import Home from './screens/Home/index';
-import Busca from './screens/Busca/index';
-import Perfil from './screens/Perfil/index';
-import Pedidos from './screens/Pedidos/index';
+import Home from './screens/Home';
+import Busca from './screens/Busca';
+import Perfil from './screens/Perfil';
+import Pedidos from './screens/Pedidos';
 
-const BottomTab = createBotttomTabNavigator();
+const BottomTab = createBottomTabNavigator();
 
 export default function Routes() {
     return (
