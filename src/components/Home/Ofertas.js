@@ -21,6 +21,7 @@ export default function Ofertas({ navigation }) {
                 id: offer.id,
                 offer_url: offer.offer_url,
                 title: offer.title,
+                newPrice: formatNumber(offer.newPrice),
                 price: formatNumber(offer.price),
                 ingredients: offer.ingredients,
                 delivery: offer.delivery,
