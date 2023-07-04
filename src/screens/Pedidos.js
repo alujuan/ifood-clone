@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 export default function Pedidos() {
   return (
     <View style={styles.container}>
-      <Text>Pedidos</Text>
+      <Text style={styles.aviso}>Você ainda não fez nenhum pedido</Text>
     </View>
   );
 }
@@ -15,5 +15,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  aviso: {
+    marginTop: 25,
+    fontSize: 18,
+    color: '#333'
   },
 });
