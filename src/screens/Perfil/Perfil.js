@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  SrcollView,
+  ScrollView,
   TouchableOpacity,
   View,
   Text,

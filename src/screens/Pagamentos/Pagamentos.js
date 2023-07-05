@@ -3,9 +3,9 @@ import { View, Text, StyleSheet } from 'react-native';
 
 export default function Pagamentos() {
     return (
-        <view style={StyleSheet.container}>
+        <View style={StyleSheet.container}>
             <Text>Pagamentos</Text>
-        </view>
+        </View>
     );
 }
 
