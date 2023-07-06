@@ -1,7 +1,7 @@
-import React from 'react';
-import { MaterialIcons } from '@expo/vector-icons';
+import React from "react";
+import { MaterialIcons } from "@expo/vector-icons";
 
-import { Image, ScrollView, Text, View, StyleSheet } from 'react-native';
+import { Image, ScrollView, Text, View, StyleSheet } from "react-native";
 
 export default function Item({ route, navigation }) {
   const { item } = route.params;
@@ -9,7 +9,7 @@ export default function Item({ route, navigation }) {
   return (
     <ScrollView showsVerticalScrollIndicator={true} style={styles.container}>
       <View style={styles.detalhe}></View>
-      <Image style={styles.itemImage} source={{ uri: item.offer_url }}  />
+      <Image style={styles.itemImage} source={{ uri: item.offer_url }} />
       <Text style={styles.itemTitulo}>{item.title}</Text>
       <Text style={styles.itemIngredientes}>{item.ingredients}</Text>
       <View style={styles.info}>
@@ -30,7 +30,7 @@ export default function Item({ route, navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   detalhe: {
     marginTop: 10,
@@ -43,42 +43,42 @@ const styles = StyleSheet.create({
   },
   itemTitulo: {
     fontSize: 32,
-    color: '#333',
-    fontWeight: 'bold',
+    color: "#333",
+    fontWeight: "bold",
     marginTop: 10,
   },
   itemIngredientes: {
     fontSize: 18,
-    color: '#999',
+    color: "#999",
     marginTop: 10,
   },
   itemPreco: {
-    color: 'green',
+    color: "green",
     fontSize: 22,
   },
   itemPrecoAntigo: {
     marginLeft: 5,
-    color: '#999',
+    color: "#999",
     fontSize: 22,
-    textDecorationLine: 'line-through',
+    textDecorationLine: "line-through",
   },
   entrega: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginTop: 20,
     borderWidth: 1,
-    borderColor: '#eee',
+    borderColor: "#eee",
     borderRadius: 2,
     padding: 15,
   },
   wrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   entregaTitulo: {
     fontSize: 15,
-    color: 'red',
+    color: "red",
   },
   entregaAtraso: {
     marginLeft: 10,

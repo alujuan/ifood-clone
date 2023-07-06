@@ -6,7 +6,7 @@ export default function Promocoes({ navigation }) {
   const [promocoes, setPromocoes] = useState([]);
 
   useEffect(() => {
-    async function carregarSugestoes() {
+    async function carregarPromocoes() {
       const response = await api.get("promotions");
       setPromocoes(response.data);
     }
@@ -17,7 +17,7 @@ export default function Promocoes({ navigation }) {
     <ScrollView
       showsHorizontalScrollIndicator={false}
       horizontal
-      styles={styles.lista}
+      style={styles.lista}
     >
       {promocoes.map((promocao) => (
         <TouchableOpacity style={styles.item} key={promocao.id}>
@@ -28,17 +28,17 @@ export default function Promocoes({ navigation }) {
   );
 }
 
-const styes = StyleSheet.create({
-    lista: {
-        marginVertical: 20,
-        marginHorizontal: 0,
-        paddingLeft: 5,
-    },
-    item: {
-        marginLeft: 15,
-    },
-    imagem: {
-        width: 300,
-        height: 150,
-    },
+const styles = StyleSheet.create({
+  lista: {
+    marginVertical: 20,
+    marginHorizontal: 0,
+    paddingLeft: 5,
+  },
+  item: {
+    marginLeft: 15,
+  },
+  imagem: {
+    width: 300,
+    height: 150,
+  },
 });

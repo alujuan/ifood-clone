@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   Image,
   ScrollView,
@@ -6,15 +6,15 @@ import {
   TouchableOpacity,
   View,
   StyleSheet,
-} from 'react-native';
-import api from '../../services/api';
+} from "react-native";
+import api from "../../services/api";
 
 export default function Categorias() {
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
     async function carregarCategorias() {
-      const response = await api.get('categories');
+      const response = await api.get("categories");
       setCategorias(response.data);
     }
     carregarCategorias();
@@ -33,7 +33,7 @@ export default function Categorias() {
         {categorias.map((categoria) => (
           <TouchableOpacity key={categoria.id} style={styles.item}>
             <Image
-              source={{ uri: categoria.categorie_url }} 
+              source={{ uri: categoria.categorie_url }}
               style={styles.imagem}
             />
             <Text style={styles.categoriaTitulo}>{categoria.title}</Text>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   titulo: {
     fontSize: 23,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   lista: {
     marginTop: 10,
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   item: {
     marginRight: 15,
-    alignItems: 'center',
+    alignItems: "center",
   },
   imagem: {
     width: 200,
@@ -72,6 +72,6 @@ const styles = StyleSheet.create({
   categoriaTitulo: {
     fontSize: 16,
     marginTop: 10,
-    color: '#999',
+    color: "#999",
   },
 });
